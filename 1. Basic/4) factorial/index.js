@@ -1,9 +1,11 @@
+let count = 1;
 function factorial(n) {
-  let count = 1;
-  for (let i=1; i<=n; i++){
-    count *= i;
+  if (n == 1) {
+    return count;
+  } else {
+    count *= n;
+    return factorial(n - 1);
   }
-  return count;
 }
 
 window.factorial = factorial;
