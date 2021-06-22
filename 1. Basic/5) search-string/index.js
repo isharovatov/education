@@ -5,8 +5,7 @@ function searchString(obj) {
       str += key + "=" + obj[key] + "&";
     }
   }
-  str = str.substring(0, str.length - 1);
-  return str;
+  return str.slice(0, -1);
 }
 
 window.searchString = searchString;
