@@ -1,10 +1,13 @@
 function findPair(arr) {
-  for (let i = 0; i < arr.length - 1; i++) {
-    const j = i + 1;
-    if (arr.includes(arr[i], j)) {
-      return arr[i];
-    }
-  }
+  arr
+    .sort(function (a, b) {
+      return a - b;
+    })
+    .forEach(function (element, i, arr) {
+      if (element === arr[i + 1]) {
+        return element;
+      }
+    });
   return null;
 }
 
