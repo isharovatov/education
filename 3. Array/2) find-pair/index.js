@@ -1,6 +1,11 @@
 function findPair(arr) {
-  // Напиши свой код здесь
-};
+  for (let i = 0; i < arr.length - 1; i++) {
+    const j = i + 1;
+    if (arr.includes(arr[i], j)) {
+      return arr[i];
+    } else if (i === arr.length - 2) return null;
+  }
+}
 
 window.findPair = findPair;
 
