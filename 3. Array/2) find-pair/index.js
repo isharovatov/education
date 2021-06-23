@@ -3,8 +3,9 @@ function findPair(arr) {
     const j = i + 1;
     if (arr.includes(arr[i], j)) {
       return arr[i];
-    } else if (i === arr.length - 2) return null;
+    }
   }
+  return null;
 }
 
 window.findPair = findPair;
