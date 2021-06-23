@@ -1,32 +1,30 @@
 function isEqual(a, b) {
-  let FristMassivKey = [];
-  let SecondMassivKey = [];
+  let FristArrayKey = [];
+  let SecondArrayKey = [];
 
-  let FristMassivValues = [];
-  let SecondMassivValues = [];
+  let FristArrayValues = [];
+  let SecondArrayValues = [];
 
   try {
-    FristMassivKey = Object.keys(a);
-    SecondMassivKey = Object.keys(b);
+    FristArrayKey = Object.keys(a);
+    SecondArrayKey = Object.keys(b);
 
-    FristMassivValues = Object.values(a);
-    SecondMassivValues = Object.values(b);
+    FristArrayValues = Object.values(a);
+    SecondArrayValues = Object.values(b);
   } catch {
     return false;
   }
 
-  if (FristMassivKey.length !== SecondMassivKey.length) {
+  if (FristArrayKey.length !== SecondArrayKey.length) {
     return false;
   }
-  for (let i = 0; i <= FristMassivKey.length - 1; i++) {
-    if (!SecondMassivKey.includes(FristMassivKey[i])) {
+  for (let i = 0; i <= FristArrayKey.length - 1; i++) {
+    if (!SecondArrayKey.includes(FristArrayKey[i])) {
       return false;
     }
-  }
-  for (let i = 0; i <= FristMassivKey.length - 1; i++) {
-    let j = SecondMassivKey.indexOf(FristMassivKey[i]);
+    let j = SecondArrayKey.indexOf(FristArrayKey[i]);
 
-    if (FristMassivValues[i] !== SecondMassivValues[j]) {
+    if (FristArrayValues[i] !== SecondArrayValues[j]) {
       return false;
     }
   }
