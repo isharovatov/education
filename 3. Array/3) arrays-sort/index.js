@@ -1,6 +1,11 @@
 function arraysSort(arr) {
-  // Напиши свой код здесь
-};
+  arr.sort(function (a, b) {
+    if (Math.max.apply(Math, a) < Math.max.apply(Math, b)) {
+      return -1;
+    }
+  });
+  return arr;
+}
 
 window.arraysSort = arraysSort;
 
