@@ -1,5 +1,4 @@
 function isEqual(a, b) {
-  console.log(null === {});
   let FristMassivKey = [];
   let SecondMassivKey = [];
 
