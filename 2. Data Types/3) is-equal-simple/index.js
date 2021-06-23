@@ -1,13 +1,13 @@
 function isEqual(a, b) {
-  let FristArrayKey = [];
-  let SecondArrayKey = [];
+  let FristArrayKeys = [];
+  let SecondArrayKeys = [];
 
   let FristArrayValues = [];
   let SecondArrayValues = [];
 
   try {
-    FristArrayKey = Object.keys(a);
-    SecondArrayKey = Object.keys(b);
+    FristArrayKeys = Object.keys(a);
+    SecondArrayKeys = Object.keys(b);
 
     FristArrayValues = Object.values(a);
     SecondArrayValues = Object.values(b);
@@ -15,14 +15,15 @@ function isEqual(a, b) {
     return false;
   }
 
-  if (FristArrayKey.length !== SecondArrayKey.length) {
+  if (FristArrayKeys.length !== SecondArrayKeys.length) {
     return false;
   }
-  for (let i = 0; i <= FristArrayKey.length - 1; i++) {
-    if (!SecondArrayKey.includes(FristArrayKey[i])) {
+  for (let i = 0; i <= FristArrayKeys.length - 1; i++) {
+    
+    if (!SecondArrayKeys.includes(FristArrayKeys[i])) {
       return false;
     }
-    let j = SecondArrayKey.indexOf(FristArrayKey[i]);
+    const j = SecondArrayKeys.indexOf(FristArrayKeys[i]);
 
     if (FristArrayValues[i] !== SecondArrayValues[j]) {
       return false;
