@@ -1,14 +1,15 @@
-import stringToType from "./index1.js";
+import stringToType from "./../../2. Data Types/1) string-to-type/index.js";
 
 function queryToObject(query) {
   let queryObj = new Object();
   if (query === "" || query === "?") {
     return queryObj;
   } else {
-    query = query.split("?"); //.join()
-    query = query[1].split("&");
+    let str
+    str = query.split("?"); //.join()
+    str = str[1].split("&");
 
-    query.forEach((a) => {
+    str.forEach((a) => {
       a = a.split("=");
       queryObj[a[0]] = stringToType(a[1]);
     });
@@ -16,6 +17,9 @@ function queryToObject(query) {
     return queryObj;
   }
 }
+
+
+
 
 window.queryToObject = queryToObject;
 
