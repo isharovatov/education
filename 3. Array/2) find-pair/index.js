@@ -1,6 +1,6 @@
 function findPair(arr) {
   let pair = null;
-  arr.sort(function (a, b) {
+  arr.sort((a, b) => {
     if (a === b) {
       pair = a;
     }
