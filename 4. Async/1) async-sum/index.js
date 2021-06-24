@@ -3,7 +3,7 @@ function asyncSum(a, b) {
     if ((typeof a !== "number") || (typeof b !== "number"))
       return reject(new Error('reject'));
 
-    return setTimeout(() =>resolve(console.log(a)), 1000);
+    return setTimeout(() =>resolve(a+b), 1000);
   });
 }
 
