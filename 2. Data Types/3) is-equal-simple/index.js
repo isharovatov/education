@@ -18,17 +18,34 @@ function isEqual(a, b) {
   if (FristArrayKeys.length !== SecondArrayKeys.length) {
     return false;
   }
-  for (let i = 0; i <= FristArrayKeys.length - 1; i++) {
-    
-    if (!SecondArrayKeys.includes(FristArrayKeys[i])) {
-      return false;
-    }
-    const j = SecondArrayKeys.indexOf(FristArrayKeys[i]);
 
-    if (FristArrayValues[i] !== SecondArrayValues[j]) {
-      return false;
+  let non = 0;
+  if (
+    !FristArrayKeys.some((r) => {
+      if (SecondArrayKeys.indexOf(r) >= 0) {
+        console.log("yes1");
+        const i = FristArrayKeys.indexOf(r);
+        const j = SecondArrayKeys.indexOf(r);
+        if (FristArrayValues[i] !== SecondArrayValues[j]) {
+          non = 5;
+        }
+      } else {
+        console.log("no1");
+        non = 5;
+      }
     }
+    )
+  ) 
+  {
+    console.log("yes2");
+  } else {
+    console.log("no2");
   }
+  console.log(non);
+  if (non === 5) {
+    return false;
+  }
+
   return true;
 }
 
