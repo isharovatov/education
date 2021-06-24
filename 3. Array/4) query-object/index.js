@@ -9,9 +9,9 @@ function queryToObject(query) {
     str = query.split("?"); //.join()
     str = str[1].split("&");
 
-    str.forEach((a) => {
-      a = a.split("=");
-      queryObj[a[0]] = stringToType(a[1]);
+    str.forEach((pairPropertyValue) => {
+      pairPropertyValue = pairPropertyValue.split("=");
+      queryObj[pairPropertyValue[0]] = stringToType(pairPropertyValue[1]);
     });
 
     return queryObj;
