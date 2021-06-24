@@ -1,14 +1,13 @@
 function findPair(arr) {
-  arr
-    .sort(function (a, b) {
-      return a - b;
-    })
-    .forEach(function (element, i, arr) {
-      if (element === arr[i + 1]) {
-        return element;
-      }
-    });
-  return null;
+  let pair = null;
+  arr.sort(function (a, b) {
+    if (a === b) {
+      pair = a;
+    }
+    return a - b;
+  });
+
+  return pair;
 }
 
 window.findPair = findPair;
